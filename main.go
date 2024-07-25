@@ -20,7 +20,7 @@ func InitLogger() {
 	zerolog.SetGlobalLevel(zerolog.ErrorLevel)
 }
 
-func generateRandomLevel() {
+func GenerateRandomLevel() {
 	rand.Seed(time.Now().UnixNano())
 
 	index := rand.Intn(len(logLevels))
