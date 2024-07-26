@@ -32,7 +32,7 @@ func GenerateRandomLevel() {
 }
 
 func GetPackageLogger() *zerolog.Logger {
-	return myGlobalLogger
+	return &myGlobalLogger
 }
 
 func GenerateRandomGlobalLevel() {
