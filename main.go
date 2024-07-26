@@ -31,7 +31,7 @@ func GenerateRandomLevel() {
 	zerolog.SetGlobalLevel(newLogLevel)
 }
 
-func GetPackageLogger() zerolog.Logger {
+func GetPackageLogger() *zerolog.Logger {
 	return myGlobalLogger
 }
 
