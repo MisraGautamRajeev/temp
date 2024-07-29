@@ -49,3 +49,11 @@ func ChangeGlobalLevel(newLevel string) {
 	}
 	myGlobalLogger = log.Logger.Level(level)
 }
+
+func ChangeGlobalLogger(newLevel string) {
+	level, ok := logLevelMap[newLevel]
+	if !ok {
+		return
+	}
+	log.Logger = log.Logger.Level(level)
+}
