@@ -39,15 +39,7 @@ func GenerateRandomGlobalLevel() {
 	rand.Seed(time.Now().UnixNano())
 
 	index := rand.Intn(len(logLevels))
-	ChangeGlobalLevel(logLevels[index])
-}
-
-func ChangeGlobalLevel(newLevel string) {
-	level, ok := logLevelMap[newLevel]
-	if !ok {
-		return
-	}
-	myGlobalLogger = log.Logger.Level(level)
+	ChangeGlobalLogger(logLevels[index])
 }
 
 func ChangeGlobalLogger(newLevel string) {
